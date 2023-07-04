@@ -32,7 +32,7 @@ app.get('/', (req, res) => {
 
 async function run() {
   try {
-    await client.connect();
+    client.connect();
     const database = client.db("doctorsPortal");
     const appointmentCollection = database.collection("appointments");
     const doctorCollection = database.collection("doctors");
